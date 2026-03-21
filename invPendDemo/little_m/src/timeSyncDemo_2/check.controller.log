@@ -1,0 +1,3911 @@
+Script started on 2026-03-08 09:38:16+00:00 [TERM="xterm" TTY="/dev/pts/7" COLUMNS="80" LINES="24"]
+make[1]: Entering directory '/data/tools/pave/innexis_home/vsi_2025.2/examples/vsiTutorials/invPendDemo/src/timeSyncDemo'
+./VsiClient1\
+	--domain="AF_UNIX" --server-url="localhost" --fmuPath="/data/tools/pave/innexis_home/vsi_2025.2/lib/fmus/invPend_pid.fmu" --tmpPath="/data/tools/pave/innexis_home/vsi_2025.2/examples/vsiTutorials/invPendDemo/src/timeSyncDemo/fmuTmp1" 
++=+ XLVIP-INFO: XlTlmMessageLayer::connectToServer():
++=+    Connecting clientId=':remoteSession1' to 'server@localhost' ...
++=+    Successfully connected 'client :remoteSession1' to 'server@localhost'
++=+    Negotiated socket connection configuration
++=+        Use socket manager thread=FALSE
++=+        Use TCP_NODELAY=TRUE
++=+        Use UDP=FALSE
++=+ XLVIP-INFO: XlTlmMessageLayer::connect():
++=+    Successfully connected this remote client conduit into the TLM fabric server:
++=+        clientId=:remoteSession1
++=+        conduitId=:timeServerConduit1
+           localClientConduitHandle=0x28783b8
+           remoteServerProxyConduitHandle=0x166ec890
++=+ XLVIP-INFO: XlTlmMessageLayer::connect():
++=+    Successfully connected this remote client conduit into the TLM fabric server:
++=+        clientId=:remoteSession1
++=+        conduitId=:resetServerConduit1
+           localClientConduitHandle=0x2878548
+           remoteServerProxyConduitHandle=0x166e8aa0
++=+ XLVIP-INFO: XlTlmMessageLayer::connect():
++=+    Successfully connected this remote client conduit into the TLM fabric server:
++=+        clientId=:remoteSession1
++=+        conduitId=:txCanFrameConduit1
+           localClientConduitHandle=0x2878cf0
+           remoteServerProxyConduitHandle=0x166f10b0
++=+ XLVIP-INFO: XlTlmMessageLayer::connect():
++=+    Successfully connected this remote client conduit into the TLM fabric server:
++=+        clientId=:remoteSession1
++=+        conduitId=:rxCanFrameConduit1
+           localClientConduitHandle=0x2878f70
+           remoteServerProxyConduitHandle=0x166eff40
+module = FMILIB, log level = VERBOSE: Allocating FMIL context
+module = FMILIB, log level = VERBOSE: Detecting FMI standard version
+module = FMIZIP, log level = VERBOSE: Unpacking FMU into /data/tools/pave/innexis_home/vsi_2025.2/examples/vsiTutorials/invPendDemo/src/timeSyncDemo/fmuTmp1
+module = FMIXML, log level = VERBOSE: Parsing XML to detect FMI standard version
+module = FMIXML, log level = VERBOSE: XML specifies FMI 2.0
+module = FMILIB, log level = INFO: XML specifies FMI standard version 2.0
+module = FMILIB, log level = VERBOSE: Parsing model description XML
+module = FMI2XML, log level = VERBOSE: Parsing XML element fmiModelDescription
+module = FMI2XML, log level = VERBOSE: Parsing XML element CoSimulation
+module = FMI2XML, log level = VERBOSE: Parsing XML element UnitDefinitions
+module = FMI2XML, log level = VERBOSE: Parsing XML element TypeDefinitions
+module = FMI2XML, log level = VERBOSE: Parsing XML element ModelVariables
+module = FMI2XML, log level = VERBOSE: Building alias index
+module = FMI2XML, log level = VERBOSE: Parsing XML element ModelStructure
+module = FMI2XML, log level = VERBOSE: Parsing XML element Outputs
+module = FMI2XML, log level = VERBOSE: Parsing XML element InitialUnknowns
+module = FMILIB, log level = VERBOSE: Parsing finished successfully
+module = FMILIB, log level = INFO: Loading 'linux64' binary with 'default' platform types
+module = FMICAPI, log level = VERBOSE: Loaded FMU binary from /data/tools/pave/innexis_home/vsi_2025.2/examples/vsiTutorials/invPendDemo/src/timeSyncDemo/fmuTmp1/binaries/linux64/invPend_V1.so
+module = FMICAPI, log level = VERBOSE: Loading functions for the co-simulation interface
+module = FMICAPI, log level = ERROR: Could not load the FMI function 'fmi2FreeFMUstate'. /data/tools/pave/innexis_home/vsi_2025.2/examples/vsiTutorials/invPendDemo/src/timeSyncDemo/fmuTmp1/binaries/linux64/invPend_V1.so: undefined symbol: fmi2FreeFMUstate
+module = FMICAPI, log level = WARNING: Resetting flag 'cs_canGetAndSetFMUstate'
+module = FMILIB, log level = VERBOSE: Successfully loaded all the interface functions
+module = FMICAPI, log level = VERBOSE: Calling fmi2GetModelTypesPlatform
+UnitDefinitions 
+TypeDefinitions 
+DefaultExperiment 
+ModelVariables 
+
+
+
+
+
+
++=+ XLVIP-INFO: XlTlmMessageLayer::connect():
++=+    Successfully connected this remote client conduit into the TLM fabric server:
++=+        clientId=:remoteSession1
++=+        conduitId=:txConfigPort1
+           localClientConduitHandle=0x2896b20
+           remoteServerProxyConduitHandle=0x166fb210
++=+ XLVIP-INFO: XlTlmMessageLayer::connect():
++=+    Successfully connected this remote client conduit into the TLM fabric server:
++=+        clientId=:remoteSession1
++=+        conduitId=:rxConfigPort1
+           localClientConduitHandle=0x2894ce0
+           remoteServerProxyConduitHandle=0x166f7610
+module = FMICAPI, log level = VERBOSE: Calling fmi2SetupExperiment
+module = FMICAPI, log level = VERBOSE: Calling fmi2EnterInitializationMode
+module = FMICAPI, log level = VERBOSE: Calling fmi2ExitInitializationMode
+
++=controller+=
+  VSI time: 10100 ns
+  Inputs:
+	theta = 0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 10010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 20010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 30010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 40010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 50010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 60010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 70010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 80010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 90010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 100010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 110010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 120010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 130010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 140010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 150010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 160010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 170010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 180010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 190010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 200010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 210010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 220010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 230010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 240010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 250010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 260010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 270010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 280010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 290010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 300010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 310010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 320010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 330010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 340010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 350010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 360010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 370010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 380010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 390010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 400010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 410010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 420010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 430010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 440010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 450010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 460010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 470010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 480010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 490010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 500010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 510010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 520010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 530010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 540010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 550010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 560010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 570010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 580010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 590010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 600010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 610010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 620010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 630010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 640010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 650010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 660010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 670010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 680010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 690010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 700010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 710010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 720010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 730010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 740010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 750010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 760010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 770010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 780010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 790010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 800010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 810010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 820010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 830010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 840010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 850010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 860010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 870010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 880010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 890010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 900010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 910010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 920010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 930010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 940010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 950010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 960010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 970010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 980010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 990010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1000010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1010010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1020010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1030010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1040010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1050010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1060010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1070010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1080010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1090010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1100010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1110010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1120010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1130010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1140010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1150010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1160010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1170010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1180010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1190010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1200010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1210010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1220010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1230010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1240010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1250010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1260010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1270010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1280010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1290010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1300010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1310010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1320010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1330010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1340010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1350010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1360010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1370010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1380010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1390010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1400010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1410010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1420010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1430010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1440010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1450010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1460010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1470010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1480010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1490010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1500010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1510010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1520010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1530010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1540010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1550010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1560010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1570010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1580010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1590010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1600010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1610010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1620010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1630010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1640010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1650010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1660010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1670010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1680010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1690010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1700010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1710010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1720010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1730010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1740010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1750010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1760010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1770010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1780010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1790010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1800010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1810010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1820010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1830010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1840010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1850010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1860010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1870010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1880010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1890010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1900010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1910010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1920010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1930010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1940010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1950010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1960010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1970010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1980010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 1990010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2000010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2010010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2020010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2030010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2040010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2050010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2060010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2070010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2080010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2090010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2100010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2110010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2120010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2130010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2140010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2150010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2160010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2170010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2180010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2190010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2200010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2210010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2220010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2230010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2240010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2250010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2260010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2270010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2280010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2290010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2300010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2310010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2320010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2330010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2340010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2350010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2360010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2370010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2380010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2390010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2400010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2410010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2420010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2430010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2440010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2450010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2460010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2470010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2480010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2490010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2500010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2510010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2520010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2530010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2540010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2550010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2560010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2570010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2580010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2590010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2600010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2610010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2620010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2630010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2640010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2650010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2660010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2670010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2680010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2690010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2700010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2710010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2720010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2730010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2740010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2750010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2760010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2770010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2780010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2790010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2800010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2810010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2820010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2830010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2840010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2850010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2860010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2870010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2880010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2890010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2900010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2910010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2920010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2930010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2940010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2950010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2960010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2970010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2980010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 2990010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 3000010100 ns
+  Inputs:
+	theta = -0
+  Outputs:
+	force = 0
+
+
++=controller+=
+  VSI time: 3010010100 ns
+  Inputs:
+	theta = 2.54704e-05
+  Outputs:
+	force = -0.0020479
+
+
++=controller+=
+  VSI time: 3020010100 ns
+  Inputs:
+	theta = 0.000240012
+  Outputs:
+	force = -0.0172601
+
+
++=controller+=
+  VSI time: 3030010100 ns
+  Inputs:
+	theta = 0.00084779
+  Outputs:
+	force = -0.0489647
+
+
++=controller+=
+  VSI time: 3040010100 ns
+  Inputs:
+	theta = 0.00204436
+  Outputs:
+	force = -0.0965525
+
+
++=controller+=
+  VSI time: 3050010100 ns
+  Inputs:
+	theta = 0.00401324
+  Outputs:
+	force = -0.159138
+
+
++=controller+=
+  VSI time: 3060010100 ns
+  Inputs:
+	theta = 0.00692239
+  Outputs:
+	force = -0.235543
+
+
++=controller+=
+  VSI time: 3070010100 ns
+  Inputs:
+	theta = 0.0109209
+  Outputs:
+	force = -0.324322
+
+
++=controller+=
+  VSI time: 3080010100 ns
+  Inputs:
+	theta = 0.016136
+  Outputs:
+	force = -0.423788
+
+
++=controller+=
+  VSI time: 3090010100 ns
+  Inputs:
+	theta = 0.0226708
+  Outputs:
+	force = -0.532045
+
+
++=controller+=
+  VSI time: 3100010100 ns
+  Inputs:
+	theta = 0.0306021
+  Outputs:
+	force = -0.647027
+
+
++=controller+=
+  VSI time: 3110010100 ns
+  Inputs:
+	theta = 0.0399789
+  Outputs:
+	force = -0.766535
+
+
++=controller+=
+  VSI time: 3120010100 ns
+  Inputs:
+	theta = 0.0508213
+  Outputs:
+	force = -0.888281
+
+
++=controller+=
+  VSI time: 3130010100 ns
+  Inputs:
+	theta = 0.0631205
+  Outputs:
+	force = -1.00993
+
+
++=controller+=
+  VSI time: 3140010100 ns
+  Inputs:
+	theta = 0.0768386
+  Outputs:
+	force = -1.12915
+
+
++=controller+=
+  VSI time: 3150010100 ns
+  Inputs:
+	theta = 0.0919091
+  Outputs:
+	force = -1.24366
+
+
++=controller+=
+  VSI time: 3160010100 ns
+  Inputs:
+	theta = 0.108239
+  Outputs:
+	force = -1.35124
+
+
++=controller+=
+  VSI time: 3170010100 ns
+  Inputs:
+	theta = 0.125709
+  Outputs:
+	force = -1.44984
+
+
++=controller+=
+  VSI time: 3180010100 ns
+  Inputs:
+	theta = 0.144177
+  Outputs:
+	force = -1.53754
+
+
++=controller+=
+  VSI time: 3190010100 ns
+  Inputs:
+	theta = 0.163482
+  Outputs:
+	force = -1.61267
+
+
++=controller+=
+  VSI time: 3200010100 ns
+  Inputs:
+	theta = 0.183444
+  Outputs:
+	force = -1.67377
+
+
++=controller+=
+  VSI time: 3210010100 ns
+  Inputs:
+	theta = 0.20387
+  Outputs:
+	force = -1.71966
+
+
++=controller+=
+  VSI time: 3220010100 ns
+  Inputs:
+	theta = 0.224557
+  Outputs:
+	force = -1.74944
+
+
++=controller+=
+  VSI time: 3230010100 ns
+  Inputs:
+	theta = 0.245294
+  Outputs:
+	force = -1.76253
+
+
++=controller+=
+  VSI time: 3240010100 ns
+  Inputs:
+	theta = 0.265869
+  Outputs:
+	force = -1.75865
+
+
++=controller+=
+  VSI time: 3250010100 ns
+  Inputs:
+	theta = 0.286074
+  Outputs:
+	force = -1.73787
+
+
++=controller+=
+  VSI time: 3260010100 ns
+  Inputs:
+	theta = 0.305702
+  Outputs:
+	force = -1.70056
+
+
++=controller+=
+  VSI time: 3270010100 ns
+  Inputs:
+	theta = 0.324559
+  Outputs:
+	force = -1.64741
+
+
++=controller+=
+  VSI time: 3280010100 ns
+  Inputs:
+	theta = 0.342464
+  Outputs:
+	force = -1.57943
+
+
++=controller+=
+  VSI time: 3290010100 ns
+  Inputs:
+	theta = 0.359253
+  Outputs:
+	force = -1.49788
+
+
++=controller+=
+  VSI time: 3300010100 ns
+  Inputs:
+	theta = 0.37478
+  Outputs:
+	force = -1.4043
+
+
++=controller+=
+  VSI time: 3310010100 ns
+  Inputs:
+	theta = 0.388924
+  Outputs:
+	force = -1.30046
+
+
++=controller+=
+  VSI time: 3320010100 ns
+  Inputs:
+	theta = 0.401587
+  Outputs:
+	force = -1.1883
+
+
++=controller+=
+  VSI time: 3330010100 ns
+  Inputs:
+	theta = 0.4127
+  Outputs:
+	force = -1.06994
+
+
++=controller+=
+  VSI time: 3340010100 ns
+  Inputs:
+	theta = 0.42222
+  Outputs:
+	force = -0.947611
+
+
++=controller+=
+  VSI time: 3350010100 ns
+  Inputs:
+	theta = 0.430135
+  Outputs:
+	force = -0.823606
+
+
++=controller+=
+  VSI time: 3360010100 ns
+  Inputs:
+	theta = 0.436459
+  Outputs:
+	force = -0.700254
+
+
++=controller+=
+  VSI time: 3370010100 ns
+  Inputs:
+	theta = 0.441239
+  Outputs:
+	force = -0.579867
+
+
++=controller+=
+  VSI time: 3380010100 ns
+  Inputs:
+	theta = 0.444545
+  Outputs:
+	force = -0.464695
+
+
++=controller+=
+  VSI time: 3390010100 ns
+  Inputs:
+	theta = 0.446478
+  Outputs:
+	force = -0.356882
+
+
++=controller+=
+  VSI time: 3400010100 ns
+  Inputs:
+	theta = 0.447159
+  Outputs:
+	force = -0.258429
+
+
++=controller+=
+  VSI time: 3410010100 ns
+  Inputs:
+	theta = 0.446735
+  Outputs:
+	force = -0.171153
+
+
++=controller+=
+  VSI time: 3420010100 ns
+  Inputs:
+	theta = 0.44537
+  Outputs:
+	force = -0.0966495
+
+
++=controller+=
+  VSI time: 3430010100 ns
+  Inputs:
+	theta = 0.443244
+  Outputs:
+	force = -0.0362673
+
+
++=controller+=
+  VSI time: 3440010100 ns
+  Inputs:
+	theta = 0.44055
+  Outputs:
+	force = 0.00892117
+
+
++=controller+=
+  VSI time: 3450010100 ns
+  Inputs:
+	theta = 0.43749
+  Outputs:
+	force = 0.038139
+
+
++=controller+=
+  VSI time: 3460010100 ns
+  Inputs:
+	theta = 0.43427
+  Outputs:
+	force = 0.0509198
+
+
++=controller+=
+  VSI time: 3470010100 ns
+  Inputs:
+	theta = 0.431097
+  Outputs:
+	force = 0.0471166
+
+
++=controller+=
+  VSI time: 3480010100 ns
+  Inputs:
+	theta = 0.428176
+  Outputs:
+	force = 0.0269042
+
+
++=controller+=
+  VSI time: 3490010100 ns
+  Inputs:
+	theta = 0.425702
+  Outputs:
+	force = -0.00922381
+
+
++=controller+=
+  VSI time: 3500010100 ns
+  Inputs:
+	theta = 0.423862
+  Outputs:
+	force = -0.0604653
+
+
++=controller+=
+  VSI time: 3510010100 ns
+  Inputs:
+	theta = 0.422827
+  Outputs:
+	force = -0.125725
+
+
++=controller+=
+  VSI time: 3520010100 ns
+  Inputs:
+	theta = 0.422751
+  Outputs:
+	force = -0.203635
+
+
++=controller+=
+  VSI time: 3530010100 ns
+  Inputs:
+	theta = 0.423765
+  Outputs:
+	force = -0.292584
+
+
++=controller+=
+  VSI time: 3540010100 ns
+  Inputs:
+	theta = 0.42598
+  Outputs:
+	force = -0.390743
+
+
++=controller+=
+  VSI time: 3550010100 ns
+  Inputs:
+	theta = 0.429478
+  Outputs:
+	force = -0.496108
+
+
++=controller+=
+  VSI time: 3560010100 ns
+  Inputs:
+	theta = 0.434316
+  Outputs:
+	force = -0.606531
+
+
++=controller+=
+  VSI time: 3570010100 ns
+  Inputs:
+	theta = 0.440521
+  Outputs:
+	force = -0.719769
+
+
++=controller+=
+  VSI time: 3580010100 ns
+  Inputs:
+	theta = 0.448094
+  Outputs:
+	force = -0.833519
+
+
++=controller+=
+  VSI time: 3590010100 ns
+  Inputs:
+	theta = 0.457005
+  Outputs:
+	force = -0.945472
+
+
++=controller+=
+  VSI time: 3600010100 ns
+  Inputs:
+	theta = 0.467195
+  Outputs:
+	force = -1.05335
+
+
++=controller+=
+  VSI time: 3610010100 ns
+  Inputs:
+	theta = 0.478581
+  Outputs:
+	force = -1.15495
+
+
++=controller+=
+  VSI time: 3620010100 ns
+  Inputs:
+	theta = 0.491052
+  Outputs:
+	force = -1.24819
+
+
++=controller+=
+  VSI time: 3630010100 ns
+  Inputs:
+	theta = 0.504473
+  Outputs:
+	force = -1.33115
+
+
++=controller+=
+  VSI time: 3640010100 ns
+  Inputs:
+	theta = 0.518691
+  Outputs:
+	force = -1.4021
+
+
++=controller+=
+  VSI time: 3650010100 ns
+  Inputs:
+	theta = 0.533533
+  Outputs:
+	force = -1.45956
+
+
++=controller+=
+  VSI time: 3660010100 ns
+  Inputs:
+	theta = 0.548811
+  Outputs:
+	force = -1.50228
+
+
++=controller+=
+  VSI time: 3670010100 ns
+  Inputs:
+	theta = 0.564329
+  Outputs:
+	force = -1.52931
+
+
++=controller+=
+  VSI time: 3680010100 ns
+  Inputs:
+	theta = 0.579881
+  Outputs:
+	force = -1.53999
+
+
++=controller+=
+  VSI time: 3690010100 ns
+  Inputs:
+	theta = 0.595259
+  Outputs:
+	force = -1.534
+
+
++=controller+=
+  VSI time: 3700010100 ns
+  Inputs:
+	theta = 0.610255
+  Outputs:
+	force = -1.51129
+
+
++=controller+=
+  VSI time: 3710010100 ns
+  Inputs:
+	theta = 0.624667
+  Outputs:
+	force = -1.47218
+
+
++=controller+=
+  VSI time: 3720010100 ns
+  Inputs:
+	theta = 0.6383
+  Outputs:
+	force = -1.41727
+
+
++=controller+=
+  VSI time: 3730010100 ns
+  Inputs:
+	theta = 0.650973
+  Outputs:
+	force = -1.34748
+
+
++=controller+=
+  VSI time: 3740010100 ns
+  Inputs:
+	theta = 0.662521
+  Outputs:
+	force = -1.26401
+
+
++=controller+=
+  VSI time: 3750010100 ns
+  Inputs:
+	theta = 0.672795
+  Outputs:
+	force = -1.16832
+
+
++=controller+=
+  VSI time: 3760010100 ns
+  Inputs:
+	theta = 0.681672
+  Outputs:
+	force = -1.06209
+
+
++=controller+=
+  VSI time: 3770010100 ns
+  Inputs:
+	theta = 0.68905
+  Outputs:
+	force = -0.947226
+
+
++=controller+=
+  VSI time: 3780010100 ns
+  Inputs:
+	theta = 0.694855
+  Outputs:
+	force = -0.825779
+
+
++=controller+=
+  VSI time: 3790010100 ns
+  Inputs:
+	theta = 0.699039
+  Outputs:
+	force = -0.69993
+
+
++=controller+=
+  VSI time: 3800010100 ns
+  Inputs:
+	theta = 0.701585
+  Outputs:
+	force = -0.571942
+
+
++=controller+=
+  VSI time: 3810010100 ns
+  Inputs:
+	theta = 0.702502
+  Outputs:
+	force = -0.444114
+
+
++=controller+=
+  VSI time: 3820010100 ns
+  Inputs:
+	theta = 0.701829
+  Outputs:
+	force = -0.318743
+
+
++=controller+=
+  VSI time: 3830010100 ns
+  Inputs:
+	theta = 0.699632
+  Outputs:
+	force = -0.198073
+
+
++=controller+=
+  VSI time: 3840010100 ns
+  Inputs:
+	theta = 0.696005
+  Outputs:
+	force = -0.0842581
+
+
++=controller+=
+  VSI time: 3850010100 ns
+  Inputs:
+	theta = 0.691065
+  Outputs:
+	force = 0.0206841
+
+
++=controller+=
+  VSI time: 3860010100 ns
+  Inputs:
+	theta = 0.684951
+  Outputs:
+	force = 0.114908
+
+
++=controller+=
+  VSI time: 3870010100 ns
+  Inputs:
+	theta = 0.677825
+  Outputs:
+	force = 0.196777
+
+
++=controller+=
+  VSI time: 3880010100 ns
+  Inputs:
+	theta = 0.669862
+  Outputs:
+	force = 0.264894
+
+
++=controller+=
+  VSI time: 3890010100 ns
+  Inputs:
+	theta = 0.661252
+  Outputs:
+	force = 0.318127
+
+
++=controller+=
+  VSI time: 3900010100 ns
+  Inputs:
+	theta = 0.652193
+  Outputs:
+	force = 0.355635
+
+
++=controller+=
+  VSI time: 3910010100 ns
+  Inputs:
+	theta = 0.642892
+  Outputs:
+	force = 0.376878
+
+
++=controller+=
+  VSI time: 3920010100 ns
+  Inputs:
+	theta = 0.633554
+  Outputs:
+	force = 0.381633
+
+
++=controller+=
+  VSI time: 3930010100 ns
+  Inputs:
+	theta = 0.624384
+  Outputs:
+	force = 0.369995
+
+
++=controller+=
+  VSI time: 3940010100 ns
+  Inputs:
+	theta = 0.61558
+  Outputs:
+	force = 0.342373
+
+
++=controller+=
+  VSI time: 3950010100 ns
+  Inputs:
+	theta = 0.60733
+  Outputs:
+	force = 0.299487
+
+
++=controller+=
+  VSI time: 3960010100 ns
+  Inputs:
+	theta = 0.59981
+  Outputs:
+	force = 0.242351
+
+
++=controller+=
+  VSI time: 3970010100 ns
+  Inputs:
+	theta = 0.593178
+  Outputs:
+	force = 0.172253
+
+
++=controller+=
+  VSI time: 3980010100 ns
+  Inputs:
+	theta = 0.58757
+  Outputs:
+	force = 0.0907322
+
+
++=controller+=
+  VSI time: 3990010100 ns
+  Inputs:
+	theta = 0.583102
+  Outputs:
+	force = -0.000454499
+
+
++=controller+=
+  VSI time: 4000010100 ns
+  Inputs:
+	theta = 0.579865
+  Outputs:
+	force = -0.0993626
+
+
++=controller+=
+  VSI time: 4010010100 ns
+  Inputs:
+	theta = 0.577923
+  Outputs:
+	force = -0.2039
+
+
++=controller+=
+  VSI time: 4020010100 ns
+  Inputs:
+	theta = 0.577312
+  Outputs:
+	force = -0.311865
+
+
++=controller+=
+  VSI time: 4030010100 ns
+  Inputs:
+	theta = 0.57804
+  Outputs:
+	force = -0.420993
+
+
++=controller+=
+  VSI time: 4040010100 ns
+  Inputs:
+	theta = 0.580086
+  Outputs:
+	force = -0.528995
+
+
++=controller+=
+  VSI time: 4050010100 ns
+  Inputs:
+	theta = 0.583401
+  Outputs:
+	force = -0.633605
+
+
++=controller+=
+  VSI time: 4060010100 ns
+  Inputs:
+	theta = 0.587909
+  Outputs:
+	force = -0.732624
+
+
++=controller+=
+  VSI time: 4070010100 ns
+  Inputs:
+	theta = 0.593508
+  Outputs:
+	force = -0.823961
+
+
++=controller+=
+  VSI time: 4080010100 ns
+  Inputs:
+	theta = 0.600074
+  Outputs:
+	force = -0.905672
+
+
++=controller+=
+  VSI time: 4090010100 ns
+  Inputs:
+	theta = 0.607459
+  Outputs:
+	force = -0.976
+
+
++=controller+=
+  VSI time: 4100010100 ns
+  Inputs:
+	theta = 0.615498
+  Outputs:
+	force = -1.03341
+
+
++=controller+=
+  VSI time: 4110010100 ns
+  Inputs:
+	theta = 0.624012
+  Outputs:
+	force = -1.07661
+
+
++=controller+=
+  VSI time: 4120010100 ns
+  Inputs:
+	theta = 0.632807
+  Outputs:
+	force = -1.10459
+
+
++=controller+=
+  VSI time: 4130010100 ns
+  Inputs:
+	theta = 0.641685
+  Outputs:
+	force = -1.11662
+
+
++=controller+=
+  VSI time: 4140010100 ns
+  Inputs:
+	theta = 0.65044
+  Outputs:
+	force = -1.1123
+
+
++=controller+=
+  VSI time: 4150010100 ns
+  Inputs:
+	theta = 0.658868
+  Outputs:
+	force = -1.09152
+
+
++=controller+=
+  VSI time: 4160010100 ns
+  Inputs:
+	theta = 0.66677
+  Outputs:
+	force = -1.05451
+
+
++=controller+=
+  VSI time: 4170010100 ns
+  Inputs:
+	theta = 0.673951
+  Outputs:
+	force = -1.00179
+
+
++=controller+=
+  VSI time: 4180010100 ns
+  Inputs:
+	theta = 0.680231
+  Outputs:
+	force = -0.934197
+
+
++=controller+=
+  VSI time: 4190010100 ns
+  Inputs:
+	theta = 0.685442
+  Outputs:
+	force = -0.85285
+
+
++=controller+=
+  VSI time: 4200010100 ns
+  Inputs:
+	theta = 0.689435
+  Outputs:
+	force = -0.759131
+
+
++=controller+=
+  VSI time: 4210010100 ns
+  Inputs:
+	theta = 0.692084
+  Outputs:
+	force = -0.654663
+
+
++=controller+=
+  VSI time: 4220010100 ns
+  Inputs:
+	theta = 0.693283
+  Outputs:
+	force = -0.541271
+
+
++=controller+=
+  VSI time: 4230010100 ns
+  Inputs:
+	theta = 0.692954
+  Outputs:
+	force = -0.420954
+
+
++=controller+=
+  VSI time: 4240010100 ns
+  Inputs:
+	theta = 0.691044
+  Outputs:
+	force = -0.295844
+
+
++=controller+=
+  VSI time: 4250010100 ns
+  Inputs:
+	theta = 0.68753
+  Outputs:
+	force = -0.168162
+
+
++=controller+=
+  VSI time: 4260010100 ns
+  Inputs:
+	theta = 0.682417
+  Outputs:
+	force = -0.0401815
+
+
++=controller+=
+  VSI time: 4270010100 ns
+  Inputs:
+	theta = 0.675737
+  Outputs:
+	force = 0.0858219
+
+
++=controller+=
+  VSI time: 4280010100 ns
+  Inputs:
+	theta = 0.66755
+  Outputs:
+	force = 0.20761
+
+
++=controller+=
+  VSI time: 4290010100 ns
+  Inputs:
+	theta = 0.657944
+  Outputs:
+	force = 0.323026
+
+
++=controller+=
+  VSI time: 4300010100 ns
+  Inputs:
+	theta = 0.64703
+  Outputs:
+	force = 0.430036
+
+
++=controller+=
+  VSI time: 4310010100 ns
+  Inputs:
+	theta = 0.634944
+  Outputs:
+	force = 0.526769
+
+
++=controller+=
+  VSI time: 4320010100 ns
+  Inputs:
+	theta = 0.62184
+  Outputs:
+	force = 0.611552
+
+
++=controller+=
+  VSI time: 4330010100 ns
+  Inputs:
+	theta = 0.607891
+  Outputs:
+	force = 0.68294
+
+
++=controller+=
+  VSI time: 4340010100 ns
+  Inputs:
+	theta = 0.593283
+  Outputs:
+	force = 0.739748
+
+
++=controller+=
+  VSI time: 4350010100 ns
+  Inputs:
+	theta = 0.578212
+  Outputs:
+	force = 0.781072
+
+
++=controller+=
+  VSI time: 4360010100 ns
+  Inputs:
+	theta = 0.56288
+  Outputs:
+	force = 0.806301
+
+
++=controller+=
+  VSI time: 4370010100 ns
+  Inputs:
+	theta = 0.547495
+  Outputs:
+	force = 0.81514
+
+
++=controller+=
+  VSI time: 4380010100 ns
+  Inputs:
+	theta = 0.532261
+  Outputs:
+	force = 0.807602
+
+
++=controller+=
+  VSI time: 4390010100 ns
+  Inputs:
+	theta = 0.517376
+  Outputs:
+	force = 0.78402
+
+
++=controller+=
+  VSI time: 4400010100 ns
+  Inputs:
+	theta = 0.503031
+  Outputs:
+	force = 0.745031
+
+
++=controller+=
+  VSI time: 4410010100 ns
+  Inputs:
+	theta = 0.489404
+  Outputs:
+	force = 0.691569
+
+
++=controller+=
+  VSI time: 4420010100 ns
+  Inputs:
+	theta = 0.476658
+  Outputs:
+	force = 0.624845
+
+
++=controller+=
+  VSI time: 4430010100 ns
+  Inputs:
+	theta = 0.464934
+  Outputs:
+	force = 0.546322
+
+
++=controller+=
+  VSI time: 4440010100 ns
+  Inputs:
+	theta = 0.454353
+  Outputs:
+	force = 0.457691
+
+
++=controller+=
+  VSI time: 4450010100 ns
+  Inputs:
+	theta = 0.445014
+  Outputs:
+	force = 0.360835
+
+
++=controller+=
+  VSI time: 4460010100 ns
+  Inputs:
+	theta = 0.436986
+  Outputs:
+	force = 0.257792
+
+
++=controller+=
+  VSI time: 4470010100 ns
+  Inputs:
+	theta = 0.430314
+  Outputs:
+	force = 0.150718
+
+
++=controller+=
+  VSI time: 4480010100 ns
+  Inputs:
+	theta = 0.425013
+  Outputs:
+	force = 0.0418442
+
+
++=controller+=
+  VSI time: 4490010100 ns
+  Inputs:
+	theta = 0.421072
+  Outputs:
+	force = -0.0665662
+
+
++=controller+=
+  VSI time: 4500010100 ns
+  Inputs:
+	theta = 0.418449
+  Outputs:
+	force = -0.172261
+
+
++=controller+=
+  VSI time: 4510010100 ns
+  Inputs:
+	theta = 0.417077
+  Outputs:
+	force = -0.273043
+
+
++=controller+=
+  VSI time: 4520010100 ns
+  Inputs:
+	theta = 0.416862
+  Outputs:
+	force = -0.366811
+
+
++=controller+=
+  VSI time: 4530010100 ns
+  Inputs:
+	theta = 0.417688
+  Outputs:
+	force = -0.451602
+
+
++=controller+=
+  VSI time: 4540010100 ns
+  Inputs:
+	theta = 0.419415
+  Outputs:
+	force = -0.525629
+
+
++=controller+=
+  VSI time: 4550010100 ns
+  Inputs:
+	theta = 0.421884
+  Outputs:
+	force = -0.587314
+
+
++=controller+=
+  VSI time: 4560010100 ns
+  Inputs:
+	theta = 0.424923
+  Outputs:
+	force = -0.635318
+
+
++=controller+=
+  VSI time: 4570010100 ns
+  Inputs:
+	theta = 0.428344
+  Outputs:
+	force = -0.668569
+
+
++=controller+=
+  VSI time: 4580010100 ns
+  Inputs:
+	theta = 0.431952
+  Outputs:
+	force = -0.68628
+
+
++=controller+=
+  VSI time: 4590010100 ns
+  Inputs:
+	theta = 0.435546
+  Outputs:
+	force = -0.687965
+
+
++=controller+=
+  VSI time: 4600010100 ns
+  Inputs:
+	theta = 0.438927
+  Outputs:
+	force = -0.673451
+
+
++=controller+=
+  VSI time: 4610010100 ns
+  Inputs:
+	theta = 0.441893
+  Outputs:
+	force = -0.642874
+
+
++=controller+=
+  VSI time: 4620010100 ns
+  Inputs:
+	theta = 0.444254
+  Outputs:
+	force = -0.596686
+
+
++=controller+=
+  VSI time: 4630010100 ns
+  Inputs:
+	theta = 0.445827
+  Outputs:
+	force = -0.535638
+
+
++=controller+=
+  VSI time: 4640010100 ns
+  Inputs:
+	theta = 0.446444
+  Outputs:
+	force = -0.460768
+
+
++=controller+=
+  VSI time: 4650010100 ns
+  Inputs:
+	theta = 0.445954
+  Outputs:
+	force = -0.373384
+
+
++=controller+=
+  VSI time: 4660010100 ns
+  Inputs:
+	theta = 0.444228
+  Outputs:
+	force = -0.275033
+
+
++=controller+=
+  VSI time: 4670010100 ns
+  Inputs:
+	theta = 0.441155
+  Outputs:
+	force = -0.167478
+
+
++=controller+=
+  VSI time: 4680010100 ns
+  Inputs:
+	theta = 0.436654
+  Outputs:
+	force = -0.0526564
+
+
++=controller+=
+  VSI time: 4690010100 ns
+  Inputs:
+	theta = 0.430666
+  Outputs:
+	force = 0.0673509
+
+
++=controller+=
+  VSI time: 4700010100 ns
+  Inputs:
+	theta = 0.423162
+  Outputs:
+	force = 0.190363
+
+
++=controller+=
+  VSI time: 4710010100 ns
+  Inputs:
+	theta = 0.414141
+  Outputs:
+	force = 0.314141
+
+
++=controller+=
+  VSI time: 4720010100 ns
+  Inputs:
+	theta = 0.403628
+  Outputs:
+	force = 0.436428
+
+
++=controller+=
+  VSI time: 4730010100 ns
+  Inputs:
+	theta = 0.391678
+  Outputs:
+	force = 0.554998
+
+
++=controller+=
+  VSI time: 4740010100 ns
+  Inputs:
+	theta = 0.378372
+  Outputs:
+	force = 0.667693
+
+
++=controller+=
+  VSI time: 4750010100 ns
+  Inputs:
+	theta = 0.363816
+  Outputs:
+	force = 0.772467
+
+
++=controller+=
+  VSI time: 4760010100 ns
+  Inputs:
+	theta = 0.348137
+  Outputs:
+	force = 0.867427
+
+
++=controller+=
+  VSI time: 4770010100 ns
+  Inputs:
+	theta = 0.331487
+  Outputs:
+	force = 0.950867
+
+Killed
+make[1]: *** [Makefile.client1:63: sim] Error 137
+make[1]: Leaving directory '/data/tools/pave/innexis_home/vsi_2025.2/examples/vsiTutorials/invPendDemo/src/timeSyncDemo'

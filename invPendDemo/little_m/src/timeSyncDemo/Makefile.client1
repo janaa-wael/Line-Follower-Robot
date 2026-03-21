@@ -1,0 +1,91 @@
+all: clean compile build sim
+
+TB = VsiClient1
+TSRCS = src/controller/$(TB).cxx
+SRCS = \
+	src/controller/controller.cxx \
+	
+CDEFINES += \
+	-DXL_TLM_REMOTE_CLIENT\
+	-DXML_STATIC -DFMI_XML_QUERY -DZLIB_STATIC -DFMILIB_BUILDING_LIBRARY\
+
+CFLAGS = \
+	-Wno-unused-function\
+
+include common.mk
+
+XL_VIP = $(XL_VIP_HOME)/lib/lib_rawc_tlm
+XL_VIP_OBJ = $(XL_VIP)/$(XL_BUILD_PLATFORM)
+
+UVMC_LIB_OBJ = $(UVMC_HOME)/lib/rawc_tlm/client/$(UVMC_BUILD_PLATFORM)
+
+VSI_LIB_OBJ = $(INNEXIS_VSI_LIBS)/$(XL_BUILD_PLATFORM)/remote
+VSI_LIB = $(VSI_LIB_OBJ)/libVsiGateways.so
+
+LDFLAGS += \
+	-L$(FMI_LIB_HOME)/$(FMI_LIB_VERSION)/lib -lfmilib_shared\
+
+INCL += \
+	-Isrc/controller \
+	-I$(INNEXIS_VSI_HOME)/include \
+	-I$(UVMC_HOME)/src/connect/rawc_tlm \
+	-I$(UVMC_HOME)/src/connect/rawc_tlm/tlm_rawc \
+	-I$(FMI_LIB_HOME) \
+	-I$(FMI_LIB_HOME)/$(FMI_LIB_VERSION)/include\
+	-I$(INNEXIS_VSI_HOME)/include/rapidxml-1.13 \
+
+# Start of user custom code region. Please apply edits only within these regions:  Generic variables
+
+# End of user custom code region. Please don't edit beyond this point.
+
+#-----------------------------------------------------------------------------
+compile: 
+# Start of user custom code region. Please apply edits only within these regions:  compile target
+
+# End of user custom code region. Please don't edit beyond this point.
+
+
+#-----------------------------------------------------------------------------
+build:  $(TB)
+$(TB): $(OBJS) $(TOBJS) $(VSI_LIB) $(UVMC_LIB_SO) $(XL_VIP_LIBS) 
+# Start of user custom code region. Please apply edits only within these regions:  build target
+
+# End of user custom code region. Please don't edit beyond this point.
+	mkdir -p fmuTmp1
+	$(CXX) -o $@ $^ $(LDFLAGS)
+
+#-----------------------------------------------------------------------------
+sim: 
+# Start of user custom code region. Please apply edits only within these regions:  sim target
+
+# End of user custom code region. Please don't edit beyond this point.
+
+	 ./$(TB)\
+		--domain="AF_UNIX" --server-url="localhost" --fmuPath="/data/tools/pave/innexis_home/vsi_2025.2/lib/fmus/invPend_pid.fmu" --tmpPath="$(PWD)/fmuTmp1" 
+
+
+
+#-----------------------------------------------------------------------------
+record: 
+	XL_TLM_ENABLE_IPC_RECORD=yes; export XL_TLM_ENABLE_IPC_RECORD;\
+	 ./$(TB)\
+		--domain="AF_UNIX" --server-url="localhost" --fmuPath="/data/tools/pave/innexis_home/vsi_2025.2/lib/fmus/invPend_pid.fmu" --tmpPath="$(PWD)/fmuTmp1" 
+
+
+#-----------------------------------------------------------------------------
+replay: 
+	 RemoteClientPlayer\
+		--domain="AF_UNIX" --server-url="localhost" \
+		--playbackFile=REC_:remoteSession1.dat \
+		--client-id=:remoteSession1 \
+		--port-num=50102
+#-----------------------------------------------------------------------------
+clean: 
+# Start of user custom code region. Please apply edits only within these regions:  clean target
+
+# End of user custom code region. Please don't edit beyond this point.
+
+	\rm -f $(TOBJS) $(OBJS)
+	\rm -f VsiClient1
+	\rm -f check.controller.log 
+	\rm -rf fmuTmp1

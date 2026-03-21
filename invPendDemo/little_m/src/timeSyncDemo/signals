@@ -1,0 +1,25 @@
+-N
+0 invPend 1
+amesim_interface.x_desired double o 0
+amesim_interface.x_current double o 0
+amesim_interface.angle double o 1
+amesim_interface.force double i 1
+-N
+1 controller 1
+theta double i 1
+force double o 2
+-N
+2 plotter 1
+force double i 1
+-ETH
+0 12:34:56:78:9a:bc
+1 12:34:56:78:9a:bd
+2 12:34:56:78:9a:be
+-C
+o 0 amesim_interface.angle 1 theta
+i 0 amesim_interface.force 1 force
+i 1 theta 0 amesim_interface.angle
+o 1 force 0 amesim_interface.force
+o 1 force 2 force
+i 2 force 1 force
+-END

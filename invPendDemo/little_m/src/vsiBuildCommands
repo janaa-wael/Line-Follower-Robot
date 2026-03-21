@@ -1,0 +1,48 @@
+# VSI Configuration Script - Inverted Pendulum with Controller and Plotter
+# Final Solution: Controller relays force to plotter on separate socket
+
+# Add Components
+add component -type Fmu -name invPend -fmuPath $INNEXIS_VSI_HOME/lib/fmus/InvertedPendulum.fmu
+add component -type Fmu -name controller -fmuPath $INNEXIS_VSI_HOME/lib/fmus/invPend_pid.fmu
+add component -type Python -name plotter
+
+# Add Ports (each component has ONE port)
+add port -componentName invPend -name invPend -gateway fmu2DtEthernet
+add port -componentName controller -name controller -gateway fmu2DtEthernet
+add port -componentName plotter -name plotter -gateway python2DtEthernet
+
+# Define Component Signals
+define componentSignals -componentName invPend -signals "[amesim_interface.force:double:input,amesim_interface.angle:double:output,amesim_interface.x_desired:double:output,amesim_interface.x_current:double:output]"
+define componentSignals -componentName controller -signals "[force:double:output,theta:double:input]"
+define componentSignals -componentName plotter -signals "[force:double:input]"
+
+# Socket Connections
+# Port 8080: invPend (server) + controller (client) = 2 ports
+# This is the main control loop
+add portSocket -componentName invPend -portName invPend -ipPortNum 8080 -socketType server -protocol tcpIp
+add portSocket -componentName controller -portName controller -ipPortNum 8080 -socketType client -protocol tcpIp
+
+# Port 8081: controller (server) + plotter (client) = 2 ports
+# This is for monitoring/visualization
+add portSocket -componentName controller -portName controller -ipPortNum 8081 -socketType server -protocol tcpIp
+add portSocket -componentName plotter -portName plotter -ipPortNum 8081 -socketType client -protocol tcpIp
+
+# Signal Connections
+# Control Loop (via port 8080)
+# - controller outputs force command to invPend
+# - invPend outputs angle feedback to controller
+connect signals -sourceSignal controller.force -destSignal invPend.amesim_interface.force -sourcePortName controller -destPortName invPend
+connect signals -sourceSignal invPend.amesim_interface.angle -destSignal controller.theta -sourcePortName invPend -destPortName controller
+
+# Monitoring (via port 8081)
+# - controller relays force command to plotter
+connect signals -sourceSignal controller.force -destSignal plotter.force -sourcePortName controller -destPortName plotter
+
+# Simulation Configuration
+set totalSimTime 70 s
+set simulationStep 0.001 s
+set workspaceDir .
+set digitalTwinName timeSyncDemo
+
+# Generate Digital Twin
+generate
