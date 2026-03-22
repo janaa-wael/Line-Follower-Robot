@@ -1,0 +1,49 @@
+# Components – all Python
+add component -type Python -name simulator
+add port -componentName simulator -name simulator_port -gateway python2DtCan
+
+add component -type Python -name controller
+add port -componentName controller -name controller_port -gateway python2DtCan
+
+add component -type Python -name plotter
+add port -componentName plotter -name plotter_port -gateway python2DtCan
+
+# Signals
+define componentSignals -componentName simulator -signals [x:double:output,y:double:output,theta:double:output,ref_x:double:output,ref_y:double:output,v:double:input,omega:double:input]
+
+define componentSignals -componentName controller -signals [x:double:input,y:double:input,theta:double:input,ref_x:double:input,ref_y:double:input,v:double:output,omega:double:output]
+
+define componentSignals -componentName plotter -signals [x:double:input,y:double:input,ref_x:double:input,ref_y:double:input]
+
+# Frames
+define frame -componentName simulator -portName simulator_port -id 10 -signals [x:0:64]
+define frame -componentName controller -portName controller_port -id 10 -signals [x:0:64]
+define frame -componentName plotter -portName plotter_port -id 10 -signals [x:0:64]
+
+define frame -componentName simulator -portName simulator_port -id 11 -signals [y:0:64]
+define frame -componentName controller -portName controller_port -id 11 -signals [y:0:64]
+define frame -componentName plotter -portName plotter_port -id 11 -signals [y:0:64]
+
+define frame -componentName simulator -portName simulator_port -id 12 -signals [theta:0:64]
+define frame -componentName controller -portName controller_port -id 12 -signals [theta:0:64]
+
+define frame -componentName simulator -portName simulator_port -id 13 -signals [ref_x:0:64]
+define frame -componentName controller -portName controller_port -id 13 -signals [ref_x:0:64]
+define frame -componentName plotter -portName plotter_port -id 13 -signals [ref_x:0:64]
+
+define frame -componentName simulator -portName simulator_port -id 14 -signals [ref_y:0:64]
+define frame -componentName controller -portName controller_port -id 14 -signals [ref_y:0:64]
+define frame -componentName plotter -portName plotter_port -id 14 -signals [ref_y:0:64]
+
+define frame -componentName controller -portName controller_port -id 15 -signals [v:0:64]
+define frame -componentName simulator -portName simulator_port -id 15 -signals [v:0:64]
+
+define frame -componentName controller -portName controller_port -id 16 -signals [omega:0:64]
+define frame -componentName simulator -portName simulator_port -id 16 -signals [omega:0:64]
+
+set totalSimTime 60 s
+set simulationStep 0.01 s
+set workspaceDir .
+set digitalTwinName lineFollowerDemo
+
+generate -overwrite
