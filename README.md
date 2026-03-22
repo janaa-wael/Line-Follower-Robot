@@ -7,17 +7,17 @@ The system is designed to study PID tuning, path tracking, and robustness under 
 
 ## 📁 Repository Structure
 
-.
-├── vsiBuildCommands # VSI configuration (signals, frames, components)
-├── src/ # Source code for the three clients
-│ ├── simulator/ # Robot simulator (kinematics, path, noise)
-│ │ └── simulator.py
-│ ├── controller/ # PID controller (lateral & heading errors)
-│ │ └── controller.py
-│ └── plotter/ # Real-time visualizer & data logger
-│ └── plotter.py
-├── README.md # This file
-└── ... (generated VSI folders after vsiBuild)
+`.`
+`├── vsiBuildCommands # VSI configuration (signals, frames, components)`
+`├── src/ # Source code for the three clients`
+`│ ├── simulator/ # Robot simulator (kinematics, path, noise)`
+`│ │ └── simulator.py`
+`│ ├── controller/ # PID controller (lateral & heading errors)`
+`│ │ └── controller.py`
+`│ └── plotter/ # Real-time visualizer & data logger`
+`│ └── plotter.py`
+`├── README.md # This file`
+`└── ... (generated VSI folders after vsiBuild)`
 
 ## 🚀 Getting Started
 
@@ -108,7 +108,7 @@ In **Terminal 2**, set `NOISE_LEVEL` to 0.1, 0.2, 0.3, etc. Keep the best gains.
 
 ## 👥 Author
 
-- [Jana Wael] – janawael119@gmail.com
+- Jana Wael – janawael119@gmail.com
 
 *This project was created as part of the **Digital Twin course at Siemens Academy**.
 
